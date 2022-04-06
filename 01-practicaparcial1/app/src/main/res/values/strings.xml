@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">practica_parcial1</string>
+    <string name="head_team_a">TEAM A</string>
+    <string name="action_add_goal">+1 gol</string>
+    <string name="head_team_b">TEAM B</string>
+
+</resources>
