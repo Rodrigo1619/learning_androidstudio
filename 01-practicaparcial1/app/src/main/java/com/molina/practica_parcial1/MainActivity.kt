@@ -1,7 +1,9 @@
 package com.molina.practica_parcial1
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 
@@ -16,6 +18,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var TeamBScoreTextView: TextView
     private lateinit var TeamAAddButton: Button
     private lateinit var TeamBAddButton: Button
+    private lateinit var saveButton: Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,6 +50,19 @@ class MainActivity : AppCompatActivity() {
             //NEW WAY
             updateVisualScores(TeamBScoreTextView, ScoreTeamB)
         }
+        //adding reference of saveButton
+        saveButton.setOnClickListener {
+            onSave()
+        }
+    }
+    //6-)creating function for button save- second video
+    private fun onSave(){
+        //Log.d(TAG, "onSave") //lifecycle
+        //Communication with components is done by an Intent (intención)
+        val intent = Intent(this, ScoreActivity::class.java) //we wanna go from this activity to ScoreActivity
+        intent.putExtra(KEY_TEAM_A, ScoreTeamA)
+        intent.putExtra(KEY_TEAM_B, ScoreTeamB)
+        startActivity(intent)
     }
     //4-) updating visual scores
     private fun updateVisualScores(view: TextView, score: Int){
@@ -75,12 +91,17 @@ class MainActivity : AppCompatActivity() {
         TeamAAddButton = findViewById(R.id.action_add_one_team_a)
         TeamBScoreTextView = findViewById(R.id.score_team_b_text_view)
         TeamBAddButton = findViewById(R.id.action_add_one_team_b)
+        saveButton = findViewById(R.id.action_save)
     }
 
     //companion object is a static function
     companion object {
+        //TAG
+        //just for seeing the life cycle of the app
+        //private val TAG = MainActivity::class.simpleName
         //global variables for the function
-        private const val KEY_TEAM_A = "ScoreTeamA"
-        private const val KEY_TEAM_B = "ScoreTeamB"
+        //we took away the private word because now we need that others activity has this information
+        const val KEY_TEAM_A = "ScoreTeamA"
+        const val KEY_TEAM_B = "ScoreTeamB"
     }
 }

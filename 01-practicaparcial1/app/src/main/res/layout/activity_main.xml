@@ -39,14 +39,15 @@
             />
     </LinearLayout>
 
-    <!-- separator -->
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/divider_size"
-        android:background="@color/black"
-        android:layout_marginStart="@dimen/default_gap"
-        android:layout_marginEnd="@dimen/default_gap"
+    <!-- we put away the divider for a button -->
+    <Button
+        android:id="@+id/action_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/action_save"
         />
+
 
     <!-- team b -->
     <LinearLayout
