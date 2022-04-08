@@ -39,5 +39,10 @@
         tools:text="2"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
         />
+    <Button
+        android:id="@+id/action_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ACTION"/>
 
 </LinearLayout>
