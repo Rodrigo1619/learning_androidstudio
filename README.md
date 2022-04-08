@@ -88,5 +88,5 @@ luego de todo esto, presiona sync now (barra azul de arriba)
 ##Repositorios
 #Nestor 
 https://github.com/Nexxtor/androidKotlin
-#https://github.com/00146520/moviles
-
+https://github.com/00146520/moviles
+https://github.com/juanrodas-654/Kotlin
