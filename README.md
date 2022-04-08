@@ -83,3 +83,9 @@ luego colocar ext{} dentro de buildscript arriba de repositories
 id 'androidx.navigation.safeargs.kotlin'
 
 luego de todo esto, presiona sync now (barra azul de arriba)
+
+
+##Repositorios
+#Nestor 
+https://github.com/Nexxtor/androidKotlin
+
